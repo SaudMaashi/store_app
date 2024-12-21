@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class SellerHomeScreen extends StatelessWidget {
+  const SellerHomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,19 +13,19 @@ class HomeScreen extends StatelessWidget {
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: 'Category',
+            label: 'Home',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: 'Category',
+            label: 'Stores',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: 'Category',
+            label: 'Cart',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: 'Category',
+            label: 'Profile',
           ),
         ],
       ),

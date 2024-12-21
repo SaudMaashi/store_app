@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:store_app/screens/customer_home.dart';
+import 'package:store_app/screens/user_home_screen.dart';
 
 void main() {
   runApp(const StoreApp());
@@ -15,7 +15,7 @@ class StoreApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const HomeScreen(),
+      home: const UserHomeScreen(),
     );
   }
 }
