@@ -2,9 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class AppTheme {
-  final primary = const Color(0xFF8E6CEF);
-  final secondary = const Color(0xFFF4F4F4);
-
   static final light = ThemeData(
     useMaterial3: false,
     primaryColor: const Color(0xFF8E6CEF),
@@ -22,12 +19,14 @@ class AppTheme {
       brightness: Brightness.light,
     ),
     scaffoldBackgroundColor: Colors.white,
+    // ===================================
+    // DONE
     appBarTheme: const AppBarTheme(
-      backgroundColor: Color(0xFF8E6CEF),
-      foregroundColor: Color(0xFF000000),
-      elevation: 4.0,
+      backgroundColor: Colors.transparent,
+      elevation: 0,
       centerTitle: true,
     ),
+    // ===================================
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
       backgroundColor: Color(0xFF8E6CEF),
       selectedItemColor: Color(0xFFFFFFFF),
@@ -40,7 +39,7 @@ class AppTheme {
         foregroundColor: const Color(0xFFFFFFFF),
         backgroundColor: const Color(0xFF8E6CEF),
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(100),
+          borderRadius: BorderRadius.circular(24),
         ),
       ),
     ),
@@ -112,12 +111,14 @@ class AppTheme {
       brightness: Brightness.dark,
     ),
     scaffoldBackgroundColor: const Color(0xFF1D182A),
+    // ===================================
+    // DONE
     appBarTheme: const AppBarTheme(
-      backgroundColor: Color(0xFF8E6CEF),
-      foregroundColor: Colors.white,
-      elevation: 4.0,
+      backgroundColor: Colors.transparent,
+      elevation: 0,
       centerTitle: true,
     ),
+    // ===================================
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
       backgroundColor: Color(0xFF8E6CEF),
       selectedItemColor: Colors.white,
