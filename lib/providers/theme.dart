@@ -28,11 +28,11 @@ class AppTheme {
     ),
     // ===================================
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-      backgroundColor: Color(0xFF8E6CEF),
-      selectedItemColor: Color(0xFFFFFFFF),
-      unselectedItemColor: Color(0xFF000000),
+      backgroundColor: Colors.white,
+      selectedItemColor: Color(0xFF8E6CEF),
+      unselectedItemColor: Color(0xFF939393),
     ),
-    // ==========================================
+// =================================================
     // DONE
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
@@ -120,9 +120,9 @@ class AppTheme {
     ),
     // ===================================
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-      backgroundColor: Color(0xFF8E6CEF),
-      selectedItemColor: Colors.white,
-      unselectedItemColor: Color(0xFF212121),
+      backgroundColor: Color(0xFF1D182A),
+      selectedItemColor: Color(0xFF8E6CEF),
+      unselectedItemColor: Color(0xFF8D8B94),
     ),
 // =================================================
 // DONE

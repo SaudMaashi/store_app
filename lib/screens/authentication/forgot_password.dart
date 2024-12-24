@@ -1,6 +1,5 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
+import 'package:store_app/widgets/app_back_button.dart';
 import 'package:store_app/widgets/app_button.dart';
 import 'package:store_app/widgets/app_text_form_field.dart';
 
@@ -14,23 +13,7 @@ class ForgotPasswordScreen extends StatelessWidget {
       appBar: AppBar(
         leadingWidth: screenSize.width * 0.2,
         toolbarHeight: screenSize.width * 0.18,
-        leading: InkWell(
-          onTap: () {
-            // To Be Implemented
-            Navigator.pop(context);
-          },
-          child: Padding(
-            padding: const EdgeInsets.only(left: 32, top: 24),
-            child: Container(
-              decoration: BoxDecoration(
-                  color: const Color(0xFFF4F4F4),
-                  borderRadius: BorderRadius.circular(24)),
-              child: Icon(
-                  Platform.isIOS ? Icons.arrow_back_ios_new : Icons.arrow_back,
-                  color: const Color(0xFF272727)),
-            ),
-          ),
-        ),
+        leading: const AppBackButton(),
       ),
       body: Padding(
         padding: const EdgeInsets.all(24),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
+import 'package:store_app/providers/general_provider.dart';
 import 'package:store_app/providers/theme.dart';
 import 'package:store_app/screens/authentication/forgot_password.dart';
 import 'package:store_app/screens/authentication/information.dart';
@@ -9,6 +10,7 @@ import 'package:store_app/screens/authentication/password.dart';
 import 'package:store_app/screens/authentication/register.dart';
 import 'package:store_app/screens/authentication/reset_confirmation.dart';
 import 'package:store_app/screens/main/user_main.dart';
+import 'package:store_app/screens/sub_screens/categories.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -32,19 +34,29 @@ class StoreApp extends StatelessWidget {
       ],
       child: Consumer<ThemeProvider>(
         builder: (context, themeProvider, child) {
-          return MaterialApp(
-            debugShowCheckedModeBanner: false,
-            theme: themeProvider.theme,
-            initialRoute: "/login",
-            routes: {
-              "/login": (_) => const LoginScreen(),
-              "/register": (_) => const RegisterScreen(),
-              "/password": (_) => const PasswordScreen(),
-              "/forgot_password": (_) => const ForgotPasswordScreen(),
-              "/user_main": (_) => const UserMainScreen(),
-              "/reset": (_) => const ResetConfirmationScreen(),
-              "/information": (_) => const UserInformation(),
-            },
+          return MultiProvider(
+            providers: [
+              ChangeNotifierProvider(
+                create: (context) {
+                  return GeneralProvider();
+                },
+              ),
+            ],
+            child: MaterialApp(
+              debugShowCheckedModeBanner: false,
+              theme: themeProvider.theme,
+              initialRoute: "/login",
+              routes: {
+                "/login": (_) => const LoginScreen(),
+                "/register": (_) => const RegisterScreen(),
+                "/password": (_) => const PasswordScreen(),
+                "/forgot_password": (_) => const ForgotPasswordScreen(),
+                "/user_main": (_) => const UserMainScreen(),
+                "/reset": (_) => const ResetConfirmationScreen(),
+                "/information": (_) => const UserInformation(),
+                "/categories": (_) => const CategoriesScreen(),
+              },
+            ),
           );
         },
       ),
