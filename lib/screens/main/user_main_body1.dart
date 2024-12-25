@@ -107,7 +107,6 @@ final List<CategoryCircle> categories = [
 class _UserMainBody1State extends State<UserMainBody1> {
   @override
   Widget build(BuildContext context) {
-    final screenSize = MediaQuery.of(context).size;
     final generalProvider = Provider.of<GeneralProvider>(context);
     final themeProvider = Provider.of<ThemeProvider>(context);
     final isLightTheme = themeProvider.theme == AppTheme.light;
@@ -246,7 +245,7 @@ class _UserMainBody1State extends State<UserMainBody1> {
                   },
                   text: "Top Selling"),
               SizedBox(
-                height: 410,
+                height: 400,
                 width: double.infinity,
                 child: ListView.builder(
                   itemCount: newIn.length,
@@ -254,6 +253,7 @@ class _UserMainBody1State extends State<UserMainBody1> {
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (context, index) {
                     return ProductCard(
+                      isExpanded: true,
                       onTap: () {
                         // To Be Implemented
                       },
@@ -278,6 +278,7 @@ class _UserMainBody1State extends State<UserMainBody1> {
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
                 return ProductCard(
+                  isExpanded: true,
                   onTap: () {
                     // To Be Implemented
                   },

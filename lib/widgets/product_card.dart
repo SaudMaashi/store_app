@@ -6,10 +6,12 @@ class ProductCard extends StatefulWidget {
     super.key,
     required this.product,
     required this.onTap,
+    required this.isExpanded,
   });
 
   final Product product;
   final VoidCallback onTap;
+  final bool isExpanded;
 
   @override
   State<ProductCard> createState() => _ProductCardState();
@@ -48,7 +50,7 @@ class _ProductCardState extends State<ProductCard> {
                     child: Row(
                       children: [
                         SizedBox(
-                          width: 200,
+                          width: widget.isExpanded ? 200 : 150,
                           child: Text(
                             widget.product.name,
                             overflow: TextOverflow.ellipsis,
@@ -102,8 +104,8 @@ class _ProductCardState extends State<ProductCard> {
                 ],
               ),
               Positioned(
-                top: 8,
-                right: 8,
+                top: 5,
+                right: 5,
                 child: IconButton(
                   color: widget.product.isFavorite ? Colors.red : Colors.black,
                   onPressed: () {

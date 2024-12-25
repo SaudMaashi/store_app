@@ -59,7 +59,9 @@ class _UserInformationState extends State<UserInformation> {
                       selectedShadowColor: Colors.transparent,
                       label: Text(
                         choice,
-                        style: const TextStyle(fontSize: 17),
+                        style: TextStyle(
+                            fontSize: 17,
+                            color: isLightTheme ? Colors.black : Colors.white),
                       ),
                       selected: _selectedChoice == choice,
                       onSelected: (bool isSelected) {
@@ -73,8 +75,8 @@ class _UserInformationState extends State<UserInformation> {
                         });
                       },
                       selectedColor: const Color(0xFF8E6CEF),
-                      labelStyle: const TextStyle(
-                        color: Colors.white,
+                      labelStyle: TextStyle(
+                        color: isLightTheme ? Colors.white : Colors.black,
                       ),
                     );
                   }).toList(),
