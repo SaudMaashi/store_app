@@ -24,7 +24,6 @@ class _ProductCardState extends State<ProductCard> {
         width: 250,
         child: Card(
           elevation: 0,
-          color: const Color(0xFFF4F4F4),
           child: Stack(
             children: [
               Column(
@@ -33,7 +32,9 @@ class _ProductCardState extends State<ProductCard> {
                     width: MediaQuery.of(context).size.width,
                     height: 300,
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(32),
+                      borderRadius: const BorderRadius.only(
+                          topLeft: Radius.circular(5),
+                          topRight: Radius.circular(5)),
                       image: DecorationImage(
                         fit: BoxFit.fill,
                         image: AssetImage(
@@ -58,23 +59,33 @@ class _ProductCardState extends State<ProductCard> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(10),
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
                     child: Row(
                       children: [
-                        Text(
-                          "\$${widget.product.price}",
-                          overflow: TextOverflow.ellipsis,
-                          maxLines: 1,
-                          style: const TextStyle(
-                            fontWeight: FontWeight.bold,
+                        if (widget.product.hasDiscount)
+                          Text(
+                            "\$${widget.product.newPrice}",
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 1,
+                            style: const TextStyle(
+                              fontWeight: FontWeight.bold,
+                            ),
+                          )
+                        else
+                          Text(
+                            "\$${widget.product.price}",
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 1,
+                            style: const TextStyle(
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
                         if (widget.product.hasDiscount)
                           Row(
                             children: [
                               const SizedBox(width: 10),
                               Text(
-                                "\$${widget.product.newPrice}",
+                                "\$${widget.product.price}",
                                 overflow: TextOverflow.ellipsis,
                                 maxLines: 1,
                                 style: const TextStyle(

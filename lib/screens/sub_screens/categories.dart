@@ -29,7 +29,7 @@ class CategoriesScreen extends StatelessWidget {
             CategoryCard(
               image: "assets/images/hoodies.png",
               onTap: () {
-                // To Be Implemented
+                Navigator.pushNamed(context, "/shop_by_categories");
               },
               text: "Hoodies",
             ),

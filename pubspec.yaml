@@ -40,6 +40,7 @@ dependencies:
   shared_preferences: ^2.3.4
   dropdown_button2: ^2.3.9
   material_floating_search_bar_2: ^0.5.0
+  standard_searchbar: ^2.1.1
 
 flutter_native_splash:
   color: "#8E6CEF"

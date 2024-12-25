@@ -11,6 +11,7 @@ import 'package:store_app/screens/authentication/register.dart';
 import 'package:store_app/screens/authentication/reset_confirmation.dart';
 import 'package:store_app/screens/main/user_main.dart';
 import 'package:store_app/screens/sub_screens/categories.dart';
+import 'package:store_app/screens/sub_screens/shop_by_categories.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -55,6 +56,7 @@ class StoreApp extends StatelessWidget {
                 "/reset": (_) => const ResetConfirmationScreen(),
                 "/information": (_) => const UserInformation(),
                 "/categories": (_) => const CategoriesScreen(),
+                "/shop_by_categories": (_) => const ShopByCategoriesScreen(),
               },
             ),
           );

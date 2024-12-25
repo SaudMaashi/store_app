@@ -18,22 +18,19 @@ class AppTheme {
       onError: Colors.red,
       brightness: Brightness.light,
     ),
+    chipTheme: const ChipThemeData(backgroundColor: Color(0xFFF4F4F4)),
     scaffoldBackgroundColor: Colors.white,
-    // ===================================
-    // DONE
+    cardTheme: const CardTheme(color: Color(0xFFF4F4F4)),
     appBarTheme: const AppBarTheme(
       backgroundColor: Colors.transparent,
       elevation: 0,
       centerTitle: true,
     ),
-    // ===================================
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
       backgroundColor: Colors.white,
       selectedItemColor: Color(0xFF8E6CEF),
       unselectedItemColor: Color(0xFF939393),
     ),
-// =================================================
-    // DONE
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         foregroundColor: const Color(0xFFFFFFFF),
@@ -43,7 +40,6 @@ class AppTheme {
         ),
       ),
     ),
-    // ==========================================
     textTheme: const TextTheme(
       displayLarge: TextStyle(
           fontSize: 32.0,
@@ -64,8 +60,6 @@ class AppTheme {
       color: Color(0xFF8E6CEF),
       size: 24.0,
     ),
-//=======================================================
-// DONE
     inputDecorationTheme: InputDecorationTheme(
       fillColor: const Color(0xFFF4F4F4),
       filled: true,
@@ -82,7 +76,6 @@ class AppTheme {
       labelStyle: const TextStyle(color: Color(0xFF8E8E8E)),
       hintStyle: const TextStyle(color: Color(0xFF8E8E8E)),
     ),
-//=======================================================
     floatingActionButtonTheme: const FloatingActionButtonThemeData(
       backgroundColor: Color(0xFF8E6CEF),
       foregroundColor: Colors.white,
@@ -110,22 +103,19 @@ class AppTheme {
       onError: Colors.red,
       brightness: Brightness.dark,
     ),
+    chipTheme: const ChipThemeData(backgroundColor: Color(0xFF342F3F)),
     scaffoldBackgroundColor: const Color(0xFF1D182A),
-    // ===================================
-    // DONE
+    cardTheme: const CardTheme(color: Color(0xFF342F3F)),
     appBarTheme: const AppBarTheme(
       backgroundColor: Colors.transparent,
       elevation: 0,
       centerTitle: true,
     ),
-    // ===================================
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
       backgroundColor: Color(0xFF1D182A),
       selectedItemColor: Color(0xFF8E6CEF),
       unselectedItemColor: Color(0xFF8D8B94),
     ),
-// =================================================
-// DONE
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         foregroundColor: const Color(0xFFFFFFFF),
@@ -135,7 +125,6 @@ class AppTheme {
         ),
       ),
     ),
-// =================================================
     textTheme: const TextTheme(
       displayLarge: TextStyle(
           fontSize: 32.0,
@@ -156,8 +145,6 @@ class AppTheme {
       color: Color(0xFF8E6CEF),
       size: 24.0,
     ),
-//=======================================================
-// DONE
     inputDecorationTheme: InputDecorationTheme(
       fillColor: const Color(0xFF342F3F),
       filled: true,
@@ -174,7 +161,6 @@ class AppTheme {
       labelStyle: const TextStyle(color: Color(0xFF8E8E8E)),
       hintStyle: const TextStyle(color: Color(0xFF8E8E8E)),
     ),
-//=======================================================
     floatingActionButtonTheme: const FloatingActionButtonThemeData(
       backgroundColor: Color(0xFF8E6CEF),
       foregroundColor: Colors.white,

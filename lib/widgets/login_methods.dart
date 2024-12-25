@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:store_app/providers/theme.dart';
 import 'package:store_app/widgets/login_method.dart';
 
 class LoginMethods extends StatelessWidget {
@@ -8,13 +10,17 @@ class LoginMethods extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final themeProvider = Provider.of<ThemeProvider>(context);
+    final isLightTheme = themeProvider.theme == AppTheme.light;
+
     return Column(
       children: [
         LoginMethodContainer(
           onTap: () {
             // To Be Implemented
           },
-          icon: const Icon(Icons.apple, color: Colors.black),
+          icon: Icon(Icons.apple,
+              color: isLightTheme ? Colors.black : Colors.white),
           text: "Continue With Apple",
         ),
         const SizedBox(height: 16),

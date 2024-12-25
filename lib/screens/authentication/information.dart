@@ -1,5 +1,7 @@
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:store_app/providers/theme.dart';
 import 'package:store_app/widgets/app_button.dart';
 
 class UserInformation extends StatefulWidget {
@@ -15,9 +17,12 @@ class _UserInformationState extends State<UserInformation> {
   final _ageRanges = ["18-24", "25-34", "35-44", "45+"];
   // ignore: unused_field
   String? _selectedAgeRange;
+
   @override
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
+    final themeProvider = Provider.of<ThemeProvider>(context);
+    final isLightTheme = themeProvider.theme == AppTheme.light;
     return Scaffold(
       body: Padding(
         padding:
@@ -49,10 +54,9 @@ class _UserInformationState extends State<UserInformation> {
                   children: _choices.map((choice) {
                     return ChoiceChip(
                       labelPadding: const EdgeInsets.symmetric(
-                          horizontal: 64, vertical: 16),
+                          horizontal: 54, vertical: 16),
                       shadowColor: Colors.transparent,
                       selectedShadowColor: Colors.transparent,
-                      backgroundColor: const Color(0xFFF4F4F4),
                       label: Text(
                         choice,
                         style: const TextStyle(fontSize: 17),
@@ -69,10 +73,8 @@ class _UserInformationState extends State<UserInformation> {
                         });
                       },
                       selectedColor: const Color(0xFF8E6CEF),
-                      labelStyle: TextStyle(
-                        color: _selectedChoice == choice
-                            ? Colors.white
-                            : Colors.black,
+                      labelStyle: const TextStyle(
+                        color: Colors.white,
                       ),
                     );
                   }).toList(),
@@ -89,6 +91,7 @@ class _UserInformationState extends State<UserInformation> {
                 ),
                 const SizedBox(height: 16),
                 DropdownButtonFormField2(
+                  barrierColor: const Color.fromARGB(83, 64, 61, 61),
                   isExpanded: true,
                   decoration: InputDecoration(
                     enabledBorder: OutlineInputBorder(
@@ -101,18 +104,19 @@ class _UserInformationState extends State<UserInformation> {
                     contentPadding: const EdgeInsets.symmetric(
                         horizontal: 16, vertical: 16),
                   ),
-                  hint: const Text(
+                  hint: Text(
                     "Age Range",
-                    style: TextStyle(fontSize: 14),
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: isLightTheme ? Colors.black : Colors.white,
+                    ),
                   ),
                   items: _ageRanges
                       .map((item) => DropdownMenuItem(
                             value: item,
                             child: Text(
                               item,
-                              style: const TextStyle(
-                                fontSize: 14,
-                              ),
+                              style: const TextStyle(fontSize: 20),
                             ),
                           ))
                       .toList(),
@@ -122,12 +126,12 @@ class _UserInformationState extends State<UserInformation> {
                   buttonStyleData: const ButtonStyleData(
                     padding: EdgeInsets.only(right: 8),
                   ),
-                  iconStyleData: const IconStyleData(
+                  iconStyleData: IconStyleData(
                     icon: Icon(
                       Icons.arrow_drop_down,
-                      color: Colors.black45,
+                      color: isLightTheme ? Colors.black : Colors.white,
                     ),
-                    iconSize: 24,
+                    iconSize: 32,
                   ),
                   dropdownStyleData: DropdownStyleData(
                     decoration: BoxDecoration(
