@@ -3,14 +3,14 @@ import 'package:store_app/models/product.dart';
 import 'package:store_app/widgets/app_back_button.dart';
 import 'package:store_app/widgets/product_card.dart';
 
-class CategoriesGeneralScreen extends StatelessWidget {
-  const CategoriesGeneralScreen({
+class ItemsGeneralScreen extends StatelessWidget {
+  const ItemsGeneralScreen({
     super.key,
-    required this.category,
+    required this.itemsName,
     required this.categoryItems,
   });
 
-  final String category;
+  final String itemsName;
   final List<Product> categoryItems;
 
   @override
@@ -30,7 +30,7 @@ class CategoriesGeneralScreen extends StatelessWidget {
               Row(
                 children: [
                   Text(
-                    "$category (${categoryItems.length}) ",
+                    "$itemsName (${categoryItems.length}) ",
                     style: Theme.of(context).textTheme.displayMedium,
                   ),
                 ],
@@ -41,7 +41,7 @@ class CategoriesGeneralScreen extends StatelessWidget {
                   itemCount: categoryItems.length,
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
-                      childAspectRatio: 0.5,
+                      childAspectRatio: 0.49,
                       crossAxisSpacing: 20,
                       mainAxisSpacing: 20),
                   itemBuilder: (context, index) {

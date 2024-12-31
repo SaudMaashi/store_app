@@ -61,12 +61,15 @@ class _UserInformationState extends State<UserInformation> {
                         choice,
                         style: TextStyle(
                             fontSize: 17,
-                            color: isLightTheme ? Colors.black : Colors.white),
+                            color: _selectedChoice == choice
+                                ? Colors.white
+                                : isLightTheme
+                                    ? Colors.black
+                                    : Colors.white),
                       ),
                       selected: _selectedChoice == choice,
                       onSelected: (bool isSelected) {
                         setState(() {
-                          // Deselect if the same choice is clicked again
                           if (_selectedChoice == choice) {
                             _selectedChoice = null;
                           } else {
@@ -78,6 +81,9 @@ class _UserInformationState extends State<UserInformation> {
                       labelStyle: TextStyle(
                         color: isLightTheme ? Colors.white : Colors.black,
                       ),
+                      backgroundColor: isLightTheme
+                          ? const Color(0xFFF4F4F4)
+                          : const Color(0xFF342F3F),
                     );
                   }).toList(),
                 ),

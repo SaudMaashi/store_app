@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:store_app/providers/general_provider.dart';
+import 'package:store_app/providers/general.dart';
 import 'package:store_app/screens/main/user_main_body1.dart';
 import 'package:store_app/screens/main/user_main_body2.dart';
 import 'package:store_app/screens/main/user_main_body3.dart';

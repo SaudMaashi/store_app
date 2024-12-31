@@ -1,17 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:store_app/widgets/category_circle.dart';
 
-class CategoryCard extends StatelessWidget {
-  const CategoryCard({
+class OrderCard extends StatelessWidget {
+  const OrderCard({
     super.key,
-    required this.image,
+    required this.prefixIcon,
+    required this.suffixIcon,
     required this.text,
     required this.onTap,
+    required this.subText,
   });
 
-  final String image;
+  final IconData prefixIcon;
+  final IconData suffixIcon;
   final String text;
-  final VoidCallback onTap;
+  final String subText;
+  final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -24,8 +27,10 @@ class CategoryCard extends StatelessWidget {
           elevation: 0,
           child: ListTile(
             contentPadding: const EdgeInsets.all(10),
-            leading: CategoryCircle(image: image),
+            leading: Icon(prefixIcon),
             title: Text(text),
+            subtitle: Text(subText),
+            trailing: Icon(suffixIcon),
           ),
         ),
       ),

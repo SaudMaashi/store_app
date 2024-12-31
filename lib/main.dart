@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
-import 'package:store_app/providers/general_provider.dart';
+import 'package:store_app/providers/general.dart';
 import 'package:store_app/providers/theme.dart';
 import 'package:store_app/screens/authentication/forgot_password.dart';
 import 'package:store_app/screens/authentication/information.dart';
@@ -10,7 +10,13 @@ import 'package:store_app/screens/authentication/password.dart';
 import 'package:store_app/screens/authentication/register.dart';
 import 'package:store_app/screens/authentication/reset_confirmation.dart';
 import 'package:store_app/screens/main/user_main.dart';
+import 'package:store_app/screens/sub_screens/accessories.dart';
+import 'package:store_app/screens/sub_screens/bags.dart';
 import 'package:store_app/screens/sub_screens/categories.dart';
+import 'package:store_app/screens/sub_screens/hoodies.dart';
+import 'package:store_app/screens/sub_screens/order_details.dart';
+import 'package:store_app/screens/sub_screens/shoes.dart';
+import 'package:store_app/screens/sub_screens/shorts.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -55,6 +61,12 @@ class StoreApp extends StatelessWidget {
                 "/reset": (_) => const ResetConfirmationScreen(),
                 "/information": (_) => const UserInformation(),
                 "/categories": (_) => const CategoriesScreen(),
+                "/order_details": (_) => const OrderDetailsScreen(),
+                "/hoodies": (_) => const HoodiesScreen(),
+                "/accessories": (_) => const AccessoriesScreen(),
+                "/shorts": (_) => const ShortsScreen(),
+                "/shoes": (_) => const ShoesScreen(),
+                "/bags": (_) => const BagsScreen(),
               },
             ),
           );
