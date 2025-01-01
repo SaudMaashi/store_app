@@ -6,7 +6,6 @@ import 'package:store_app/dummy_data/products.dart';
 import 'package:store_app/providers/general.dart';
 import 'package:store_app/providers/theme.dart';
 import 'package:store_app/widgets/app_container.dart';
-import 'package:store_app/widgets/app_search_bar.dart';
 import 'package:store_app/widgets/category_circle.dart';
 import 'package:store_app/widgets/category_header.dart';
 import 'package:store_app/widgets/product_card.dart';
