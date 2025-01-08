@@ -11,10 +11,13 @@ import 'package:store_app/screens/authentication/register.dart';
 import 'package:store_app/screens/authentication/reset_confirmation.dart';
 import 'package:store_app/screens/main/user_main.dart';
 import 'package:store_app/screens/sub_screens/accessories.dart';
+import 'package:store_app/screens/sub_screens/address_payment.dart';
 import 'package:store_app/screens/sub_screens/bags.dart';
+import 'package:store_app/screens/sub_screens/cart.dart';
 import 'package:store_app/screens/sub_screens/categories.dart';
 import 'package:store_app/screens/sub_screens/hoodies.dart';
 import 'package:store_app/screens/sub_screens/order_details.dart';
+import 'package:store_app/screens/sub_screens/order_placed.dart';
 import 'package:store_app/screens/sub_screens/shoes.dart';
 import 'package:store_app/screens/sub_screens/shorts.dart';
 
@@ -67,6 +70,9 @@ class StoreApp extends StatelessWidget {
                 "/shorts": (_) => const ShortsScreen(),
                 "/shoes": (_) => const ShoesScreen(),
                 "/bags": (_) => const BagsScreen(),
+                "/cart": (_) => const CartScreen(),
+                "/address_payment": (_) => const AddressPaymentScreen(),
+                "/order_placed": (_) => const OrderPlacedScreen(),
               },
             ),
           );

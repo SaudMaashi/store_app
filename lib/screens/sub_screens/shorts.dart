@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:store_app/dummy_data/products.dart';
+import 'package:store_app/dummy_data/dummy.dart';
 import 'package:store_app/widgets/app_back_button.dart';
 import 'package:store_app/widgets/app_search_bar.dart';
 import 'package:store_app/widgets/product_card.dart';

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:store_app/dummy_data/products.dart';
+import 'package:store_app/dummy_data/dummy.dart';
 import 'package:store_app/providers/theme.dart';
 import 'package:store_app/screens/sub_screens/items_general.dart';
 import 'package:store_app/widgets/app_back_button.dart';

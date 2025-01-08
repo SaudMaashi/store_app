@@ -1,7 +1,7 @@
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:store_app/dummy_data/products.dart';
+import 'package:store_app/dummy_data/dummy.dart';
 
 import 'package:store_app/providers/general.dart';
 import 'package:store_app/providers/theme.dart';
@@ -128,7 +128,9 @@ class _UserMainBody1State extends State<UserMainBody1> {
                 ),
               ),
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(context, "/cart");
+                },
                 child: const AppContainer(
                   color: Color(0xFF8E6CEF),
                   child: SizedBox(
