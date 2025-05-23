@@ -11,15 +11,20 @@ import 'package:store_app/screens/authentication/register.dart';
 import 'package:store_app/screens/authentication/reset_confirmation.dart';
 import 'package:store_app/screens/main/user_main.dart';
 import 'package:store_app/screens/sub_screens/accessories.dart';
+import 'package:store_app/screens/sub_screens/address.dart';
 import 'package:store_app/screens/sub_screens/address_payment.dart';
 import 'package:store_app/screens/sub_screens/bags.dart';
 import 'package:store_app/screens/sub_screens/cart.dart';
 import 'package:store_app/screens/sub_screens/categories.dart';
+import 'package:store_app/screens/sub_screens/help.dart';
 import 'package:store_app/screens/sub_screens/hoodies.dart';
 import 'package:store_app/screens/sub_screens/order_details.dart';
 import 'package:store_app/screens/sub_screens/order_placed.dart';
+import 'package:store_app/screens/sub_screens/payment.dart';
 import 'package:store_app/screens/sub_screens/shoes.dart';
 import 'package:store_app/screens/sub_screens/shorts.dart';
+import 'package:store_app/screens/sub_screens/support.dart';
+import 'package:store_app/screens/sub_screens/wishlist.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -73,6 +78,11 @@ class StoreApp extends StatelessWidget {
                 "/cart": (_) => const CartScreen(),
                 "/address_payment": (_) => const AddressPaymentScreen(),
                 "/order_placed": (_) => const OrderPlacedScreen(),
+                "/address": (_) => const AddressScreen(),
+                "/wishlist": (_) => const WishlistScreen(),
+                "/payment": (_) => const PaymentScreen(),
+                "/help": (_) => const HelpScreen(),
+                "/support": (_) => const SupportScreen(),
               },
             ),
           );

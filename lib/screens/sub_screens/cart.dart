@@ -247,7 +247,8 @@ class CartScreen extends StatelessWidget {
                     AppButton(
                         screenSize: screenSize,
                         onTap: () {
-                          Navigator.pushNamed(context, "/address_payment");
+                          Navigator.pushReplacementNamed(
+                              context, "/address_payment");
                         },
                         text: "Checkout"),
                   ],

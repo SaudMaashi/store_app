@@ -16,7 +16,6 @@ class HoodiesScreen extends StatefulWidget {
 
 class _HoodiesScreenState extends State<HoodiesScreen> {
   var _searchResult = "";
-  final _genders = ["Men", "Women"];
   final _prices = ["Min", "Max"];
   final _sortings = [
     "Recommended",
@@ -505,7 +504,7 @@ class _HoodiesScreenState extends State<HoodiesScreen> {
                                         Column(
                                           mainAxisAlignment:
                                               MainAxisAlignment.spaceBetween,
-                                          children: _genders.map((choice) {
+                                          children: genders.map((choice) {
                                             return Padding(
                                               padding: const EdgeInsets.only(
                                                   left: 8, right: 8, top: 16),

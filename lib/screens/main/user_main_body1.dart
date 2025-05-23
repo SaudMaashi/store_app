@@ -75,7 +75,8 @@ class _UserMainBody1State extends State<UserMainBody1> {
                 height: 50,
                 width: 50,
                 child: CircleAvatar(
-                  backgroundImage: AssetImage(
+                  backgroundImage: const AssetImage("assets/images/men.png"),
+                  foregroundImage: AssetImage(
                       generalProvider.selectedGender == "Men"
                           ? "assets/images/men.png"
                           : "assets/images/women.png"),

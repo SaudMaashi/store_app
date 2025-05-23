@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:store_app/widgets/app_button.dart';
 import 'package:store_app/widgets/app_text_form_field.dart';
-import 'package:store_app/widgets/login_methods.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -67,7 +66,6 @@ class LoginScreen extends StatelessWidget {
                 ],
               ),
               SizedBox(height: screenSize.height * 0.1),
-              const LoginMethods(),
             ],
           ),
         ),

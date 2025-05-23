@@ -1,13 +1,28 @@
+// ignore_for_file: unused_import, unused_field
+
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:store_app/widgets/app_back_button.dart';
 import 'package:store_app/widgets/app_button.dart';
 import 'package:store_app/widgets/app_text_form_field.dart';
 
-class RegisterScreen extends StatelessWidget {
+class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
 
   @override
+  State<RegisterScreen> createState() => _RegisterScreenState();
+}
+
+class _RegisterScreenState extends State<RegisterScreen> {
+  String? _firstName;
+  String? _lastName;
+  String? _email;
+  String? _password;
+
+  @override
   Widget build(BuildContext context) {
+    // FirebaseFirestore firebaseFirestore = FirebaseFirestore.instance;
+    // FirebaseAuth firebaseAuth = FirebaseAuth.instance;
     final screenSize = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
@@ -34,35 +49,44 @@ class RegisterScreen extends StatelessWidget {
               AppTextFormField(
                 text: "First Name",
                 onChanged: (value) {
-                  // To Be Implemented
+                  _firstName = value;
                 },
               ),
               SizedBox(height: screenSize.height * 0.03),
               AppTextFormField(
-                text: "First Name",
+                text: "Last Name",
                 onChanged: (value) {
-                  // To Be Implemented
+                  _lastName = value;
                 },
               ),
               SizedBox(height: screenSize.height * 0.02),
               AppTextFormField(
-                text: "First Name",
+                keyboardType: TextInputType.emailAddress,
+                text: "Email Address",
                 onChanged: (value) {
-                  // To Be Implemented
+                  _email = _firstName = value;
                 },
               ),
               SizedBox(height: screenSize.height * 0.02),
               AppTextFormField(
-                text: "First Name",
+                text: "Password",
                 onChanged: (value) {
-                  // To Be Implemented
+                  _password = value;
                 },
               ),
               SizedBox(height: screenSize.height * 0.03),
               AppButton(
                   screenSize: screenSize,
                   onTap: () {
-                    // To Be Implemented
+                    // try {
+                    //   firebaseAuth.createUserWithEmailAndPassword(
+                    //       email: _email!, password: _password!);
+                    // } on FirebaseAuthException catch (exception) {
+                    //   if (exception.code == "email-already-in-use") {
+                    //     ScaffoldMessenger.of(context)
+                    //         .showSnackBar(const SnackBar(content: Text("Sa")));
+                    //   }
+                    // }
                     Navigator.pushNamed(context, "/information");
                   },
                   text: "Continue"),
